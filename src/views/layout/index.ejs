@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%- title %>
+    </title>
+    <meta name="description" content="<%- description +'...' %>">
+    <link rel="canonical" href="<%= pageUrl %>" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <%- include('../partials/header-links.ejs') -%>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8GZFRDYXJT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-8GZFRDYXJT');
+        </script>
+
+        <meta name="google-site-verification" content="fLwCUol9DD2vbgdYZMZ75Y9nR8t9DochJkqCXl3lfk0" />
+</head>
+
+<body>
+
+    <div class="main_container">
+        <%- include('../partials/navbar.ejs') -%>
+            <main class="content">
+                <%- body %>
+            </main>
+            <%- include('../partials/footer.ejs') -%>
+    </div>
+
+    <%- include('../partials/scripts.ejs') -%>
+</body>
+
+</html>
